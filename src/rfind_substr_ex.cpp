@@ -13,8 +13,9 @@ size_t found = str.rfind(delimiter);
 //print all tokens except last one 
 while (found != string::npos)
 {
-//create a substring from the found position to end of the string
+//create the token
     string token = str.substr(found + delimiter.length(), str.length() - 1);
+//create a substring from the found position to end of the string
     str = str.substr(0,found);
     cout << token << '\n';
     found = str.rfind(delimiter);
